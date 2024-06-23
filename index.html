@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/icons/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
@@ -13,23 +14,48 @@
 </head>
 
 <body class="bg-slate-200">
-    <!-- start header part -->
-    <div class="flex bg-emerald-500 py-4 px-10 justify-between">
-        <div class="flex flex-row space-x-8">
+    <!-- daisyui navbar part start -->
+    <div class="navbar bg-emerald-500">
+        <!-- for mobile view -->
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost md:hidden text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-500 rounded-box w-52 text-white">
+                    <li><a class="text-white font-bold text-sm">All Ads</a></li>
+                    <li>
+                        <a class="text-white ring-1 ring-stone-500 px-2">English/Bangla</a>
+                    </li>
+                    <li><a class="text-xs">Post Your Ad</a> </li>
+
+                </ul>
+            </div>
+            <!-- logo -->
             <a href="#">
                 <img aria-colcount="p-0 m-0" src="assets/images/logo/logo.png" alt="" class="w-32">
             </a>
-            <button class="text-white font-bold text-sm">All Ads</button>
-            <button class="text-white ring-1 ring-stone-500 px-2">English/Bangla</button>
+            <div class="navbar-center hidden md:flex">
+                <ul class="menu menu-horizontal px-1 space-x-2">
+                    <li><a class="text-white font-bold text-sm">All Ads</a></li>
+                    <li><a class="text-white ring-1 ring-stone-500 px-2">English/Bangla</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="flex flex-row space-x-10">
+
+        <div class="navbar-end flex space-x-4">
             <a href="" class="text-white flex">
                 <svg class="w-6 text-white" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                     <path fill="currentcolor"
                         d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z" />
                 </svg>
-                Chat
+                <span class="hidden md:block">Chat</span>
             </a>
             <a href="" class="text-white flex">
                 <svg class="w-6 " xmlns="http://www.w3.org/2000/svg"
@@ -37,31 +63,95 @@
                     <path fill="currentcolor"
                         d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                 </svg>
-                Login</a>
-            <button class="bg-amber-400 px-3 rounded-md text-sm uppercase hover:text-white">Post Your Ad</button>
+                <span class="hidden md:block">Login</span></a>
+            <a href="#"
+                class="hidden md:block text-xs md:text-sm bg-amber-400 px-1 py-2 rounded-md uppercase hover:text-white">Post
+                Your Ad</a>
+        </div>
+
+    </div>
+    <!-- search bar for mobile view -->
+    <div class="flex justify-center items-center md:hidden bg-emerald-500 pb-2">
+        <div class="flex border-2 justify-center px-1 py-1 rounded-full">
+            <input class="w-72 focus:outline-none px-2 bg-transparent text-white" type="text"
+                placeholder="what are you lookin for?">
+            <svg class="w-6 cursor-pointer hover:bg-teal-500 bg-amber-500 p-1 rounded-full"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
         </div>
     </div>
+    <!-- daisyui navbar part end -->
     <!-- end header part -->
-    <a class="text-blue-700" href="details.html">--details page--</a>
+
     <!-- start second part -->
     <div class="rounded-t-sm py-2 mt-10 flex justify-between mx-10 bg-white px-2">
         <!-- location and vehicles start -->
-        <div class="flex space-x-32">
-            <div class="flex space-x-2 cursor-pointer text-xl font-bold "><svg class="w-4 text-emerald-500"
-                    xmlns="http://www.w3.org/2000/svg"
+        <div class="flex space-x-10 md:space-x-32">
+            <div class="flex space-x-2 cursor-pointer text-xl font-bold ">
+                <svg class="w-4 text-emerald-500" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                     <path fill="currentcolor"
                         d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                </svg><span>Location</span></div>
-            <div class="flex cursor-pointer space-x-2 text-xl font-bold pl-2"><svg class="w-4 text-emerald-500"
-                    xmlns="http://www.w3.org/2000/svg"
+                </svg><span>Location</span>
+            </div>
+            <div class="flex cursor-pointer space-x-2 text-xl font-bold pl-2">
+                <svg class="w-4 text-emerald-500" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                     <path fill="currentcolor"
                         d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
-                </svg><span>Vehicles</span></div>
+                </svg><span>Vehicles</span>
+            </div>
+            <div class="md:hidden" onclick="my_modal_3.showModal()">
+                <svg width="24" height="25" viewBox="0 0 24 25" class="svg-wrapper--8ky9e">
+                    <g fill="none" fill-rule="evenodd">
+                        <path fill="none" d="M24 1v24H0V1z"></path>
+                        <g transform="rotate(90 9 12)">
+                            <circle stroke="#009877" stroke-width="2" cx="4" cy="2" r="2"></circle>
+                            <circle stroke="#009877" stroke-width="2" cx="10" cy="16" r="2"></circle>
+                            <circle stroke="#009877" stroke-width="2" cx="16" cy="9" r="2"></circle>
+                            <path
+                                d="M5 1h13.993C19.549 1 20 1.444 20 2c0 .552-.449 1-1.007 1H5V1zM0 2c0-.552.443-1 .999-1H3v2H.999A.997.997 0 0 1 0 2zM11 15h8.002c.551 0 .998.444.998 1 0 .552-.446 1-.998 1H11v-2zM17 8h2.001c.552 0 .999.444.999 1 0 .552-.443 1-.999 1H17V8zM0 16c0-.552.446-1 .998-1H9v2H.998A.996.996 0 0 1 0 16zM0 9c0-.552.449-1 1.007-1H15v2H1.007A1.001 1.001 0 0 1 0 9z"
+                                fill="#009877"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
         </div>
+        <!-- modal for mobile view -->
+        <dialog id="my_modal_3" class="modal">
+            <div class="modal-box w-72">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                </form>
+                <div class="bg-white p-3 border-r border-gray-300">
+                    <p class="text-gray-500">sort result by</p>
+                    <select class="text-black-400 mt-2 text-sm w-full py-1 rounded-sm" style="border: 1px solid gray;">
+                        <option value="">Date:Newest on top</option>
+                    </select>
+                    <p class="mt-12 text-gray-500">Filter ads by</p>
+                    <div class="mt-4">
+                        <input type="checkbox" name="" id="">
+                        <button class="bg-red-600 text-sm text-white px-2 rounded-md">URGENT</button>
+                    </div>
+                    <div class="mt-4">
+                        <input type="checkbox" name="" id="">
+                        <button class="bg-amber-900 text-sm text-white px-2 rounded-md">FEATURED</button>
+                    </div>
+                    <p class="mt-10 text-gray-500">Type of poster</p>
+                    <select class="text-black-400 mt-2 text-sm w-full py-1 rounded-sm" style="border: 1px solid gray;">
+                        <option value="">All</option>
+                    </select>
+                    <!-- toogle items -->
+
+                </div>
+            </div>
+        </dialog>
+        <!-- modal for mobile view end -->
         <!-- search bar start -->
-        <div class="flex border-2 w-96 justify-between px-1 py-1 rounded-full">
+        <div class="hidden md:flex border-2 w-96 justify-between px-1 py-1 rounded-full">
             <input class="focus:outline-none px-2" type="text" placeholder="what are you lookin for?">
             <svg class="w-6 cursor-pointer hover:bg-teal-500 bg-amber-500 p-1 rounded-full"
                 xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +166,7 @@
     <div class="mx-10 border-t border-gray-200">
         <div class="grid grid-cols-10 w-full h-full">
             <!-- Left Div -->
-            <div class="col-span-2 bg-white p-3 border-r border-gray-300">
+            <div class="hidden md:block col-span-2 bg-white p-3 border-r border-gray-300">
                 <p class="text-gray-500">sort result by</p>
                 <select class="text-black-400 mt-2 text-sm w-full py-1 rounded-sm" style="border: 1px solid gray;">
                     <option value="">Date:Newest on top</option>
@@ -289,7 +379,7 @@
                 </ul>
             </div>
             <!-- Right Div -->
-            <div class="col-span-8 h-auto bg-white p-4">
+            <div class="col-span-10 md:col-span-8 h-auto bg-white p-4">
                 <span><a class="text-sm text-gray-400" href="#">Home </a><a class="text-sm text-gray-400" href="#"> >
                         All Ads ></a><a class="text-xl font-semibold" href="#">&nbsp; Vehicels</a></span>
                 <p class="font-bold mt-2">New and Used Vehicles for Sale in Bangladesh</p>
@@ -375,61 +465,81 @@
                 <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
                 <!-- end carousel slider part -->
                 <!-- card list start -->
-                <div class="mt-10 flex-col space-y-3">
-                    <div class="card card-side bg-base-100 shadow-xl p-3 border-orange-400 border rounded-lg">
-                        <div class="flex space-x-4">
-                            <figure><img class="h-48 w-44" src="assets/images/card/1.jpg" alt="Movie" /></figure>
-                            <div class="card-body">
-                                <h2 class="card-title font-bold">সাইকেলটা জরুরী ভাবে বিক্রি করব</h2>
+                <div class="mt-10 flex-col space-y-3 md:mr-44">
+                    <div class="card card-side bg-base-500 shadow-xl md:p-3 md:border-orange-400 border rounded-lg">
+                        <div class="flex md:flex-row flex-col space-x-4">
+                            <a href="details.html">
+                                <figure><img class="md:h-48 md:w-44 w-full p-4 md:p-0  rounded-md"
+                                        src="assets/images/card/2.jpg" alt="Movie" /></figure>
+                            </a>
+                            <div class="md:card-body">
+                                <p class="md:card-title  md:font-bold text-xs md:text-xl">সাইকেলটা জরুরী ভাবে বিক্রি করব
+                                </p>
                                 <p class="text-sm text-gray-400">Dhaka, Bicycles</p>
                                 <p class="text-teal-600 font-bold">TK 7,000</p>
                             </div>
                         </div>
-                        <p class="text-gray-400 flex justify-end">1 minute</p>
+                        <p class="text-gray-400 flex justify-end items-end ml-18 md:ml-28">1 minute</p>
                     </div>
-                    <div class="card card-side bg-base-100 shadow-xl p-3 border-orange-400 border rounded-lg">
-                        <div class="flex space-x-4">
-                            <figure><img class="h-48 w-44" src="assets/images/card/1.jpg" alt="Movie" /></figure>
-                            <div class="card-body">
-                                <h2 class="card-title font-bold">সাইকেলটা জরুরী ভাবে বিক্রি করব</h2>
+                    <div class="card card-side bg-base-500 shadow-xl md:p-3 md:border-orange-400 border rounded-lg">
+                        <div class="flex md:flex-row flex-col space-x-4">
+                            <a href="details.html">
+                                <figure><img class="md:h-48 md:w-44 w-full p-4 md:p-0  rounded-md"
+                                        src="assets/images/card/2.jpg" alt="Movie" /></figure>
+                            </a>
+                            <div class="md:card-body">
+                                <p class="md:card-title  md:font-bold text-xs md:text-xl">সাইকেলটা জরুরী ভাবে বিক্রি করব
+                                </p>
                                 <p class="text-sm text-gray-400">Dhaka, Bicycles</p>
                                 <p class="text-teal-600 font-bold">TK 7,000</p>
                             </div>
                         </div>
-                        <p class="text-gray-400 flex justify-end">1 minute</p>
+                        <p class="text-gray-400 flex justify-end items-end ml-18 md:ml-28">1 minute</p>
                     </div>
-                    <div class="card card-side bg-base-100 shadow-xl p-3 border-orange-400 border rounded-lg">
-                        <div class="flex space-x-4">
-                            <figure><img class="h-48 w-44" src="assets/images/card/1.jpg" alt="Movie" /></figure>
-                            <div class="card-body">
-                                <h2 class="card-title font-bold">সাইকেলটা জরুরী ভাবে বিক্রি করব</h2>
+                    <div class="card card-side bg-base-500 shadow-xl md:p-3 md:border-orange-400 border rounded-lg">
+                        <div class="flex md:flex-row flex-col space-x-4">
+                            <a href="details.html">
+                                <figure><img class="md:h-48 md:w-44 w-full p-4 md:p-0  rounded-md"
+                                        src="assets/images/card/2.jpg" alt="Movie" /></figure>
+                            </a>
+                            <div class="md:card-body">
+                                <p class="md:card-title  md:font-bold text-xs md:text-xl">সাইকেলটা জরুরী ভাবে বিক্রি করব
+                                </p>
                                 <p class="text-sm text-gray-400">Dhaka, Bicycles</p>
                                 <p class="text-teal-600 font-bold">TK 7,000</p>
                             </div>
                         </div>
-                        <p class="text-gray-400 flex justify-end">1 minute</p>
+                        <p class="text-gray-400 flex justify-end items-end ml-18 md:ml-28">1 minute</p>
                     </div>
-                    <div class="card card-side bg-base-100 shadow-xl p-3 border-orange-400 border rounded-lg">
-                        <div class="flex space-x-4">
-                            <figure><img class="h-48 w-44" src="assets/images/card/1.jpg" alt="Movie" /></figure>
-                            <div class="card-body">
-                                <h2 class="card-title font-bold">সাইকেলটা জরুরী ভাবে বিক্রি করব</h2>
+                    <div class="card card-side bg-base-500 shadow-xl md:p-3 md:border-orange-400 border rounded-lg">
+                        <div class="flex md:flex-row flex-col space-x-4">
+                            <a href="details.html">
+                                <figure><img class="md:h-48 md:w-44 w-full p-4 md:p-0  rounded-md"
+                                        src="assets/images/card/1.jpg" alt="Movie" /></figure>
+                            </a>
+                            <div class="md:card-body">
+                                <p class="md:card-title  md:font-bold text-xs md:text-xl">সাইকেলটা জরুরী ভাবে বিক্রি করব
+                                </p>
                                 <p class="text-sm text-gray-400">Dhaka, Bicycles</p>
                                 <p class="text-teal-600 font-bold">TK 7,000</p>
                             </div>
                         </div>
-                        <p class="text-gray-400 flex justify-end">1 minute</p>
+                        <p class="text-gray-400 flex justify-end items-end ml-18 md:ml-28">1 minute</p>
                     </div>
-                    <div class="card card-side bg-base-100 shadow-xl p-3 border-orange-400 border rounded-lg">
-                        <div class="flex space-x-4">
-                            <figure><img class="h-48 w-44" src="assets/images/card/1.jpg" alt="Movie" /></figure>
-                            <div class="card-body">
-                                <h2 class="card-title font-bold">সাইকেলটা জরুরী ভাবে বিক্রি করব</h2>
+                    <div class="card card-side bg-base-500 shadow-xl md:p-3 md:border-orange-400 border rounded-lg">
+                        <div class="flex md:flex-row flex-col space-x-4">
+                            <a href="details.html">
+                                <figure><img class="md:h-48 md:w-44 w-full p-4 md:p-0  rounded-md"
+                                        src="assets/images/card/1.jpg" alt="Movie" /></figure>
+                            </a>
+                            <div class="md:card-body">
+                                <p class="md:card-title  md:font-bold text-xs md:text-xl">সাইকেলটা জরুরী ভাবে বিক্রি করব
+                                </p>
                                 <p class="text-sm text-gray-400">Dhaka, Bicycles</p>
                                 <p class="text-teal-600 font-bold">TK 7,000</p>
                             </div>
                         </div>
-                        <p class="text-gray-400 flex justify-end">1 minute</p>
+                        <p class="text-gray-400 flex justify-end items-end ml-18 md:ml-28">1 minute</p>
                     </div>
                 </div>
                 <!-- card list ewnd -->
@@ -443,22 +553,22 @@
     <!-- banner image end -->
     <!-- start pagination part -->
     <div class="bg-white mx-10 py-6">
-        <nav class="flex items-center justify-center space-x-1">
+        <nav class="flex items-center justify-center md:space-x-1">
             <a href="#"
-                class="px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">Previous</a>
+                class="px-3 py-2 text-orange-500 md:text-gray-700 md:bg-white md:border md:border-gray-300 md:rounded-md hover:bg-gray-100">Previous</a>
             <a href="#"
-                class="px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">1</a>
+                class="px-3 py-2 text-primary md:text-gray-700 bg-white  md:border border-gray-300 rounded-md hover:bg-gray-100">1</a>
             <a href="#"
-                class="px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">2</a>
+                class="px-3 py-2 text-primary md:text-gray-700 bg-white  md:border border-gray-300 rounded-md hover:bg-gray-100">2</a>
             <a href="#"
-                class="px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">3</a>
+                class="px-3 py-2 text-primary md:text-gray-700 bg-white  md:border border-gray-300 rounded-md hover:bg-gray-100">3</a>
             <a href="#"
-                class="px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">4</a>
+                class="px-3 py-2 text-primary md:text-gray-700 bg-white  md:border border-gray-300 rounded-md hover:bg-gray-100">4</a>
             <a href="#"
-                class="px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">5</a>
-            <span class="px-3 py-2 text-gray-500">...</span>
+                class="px-3 py-2 text-primary md:text-gray-700 bg-white  md:border border-gray-300 rounded-md hover:bg-gray-100">5</a>
+            <span class="px-3 py-2 text-primary md:text-gray-500">...</span>
             <a href="#"
-                class="px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">Next</a>
+                class="px-3 py-2 text-teal-600 md:text-gray-700 md:bg-white md:border border-gray-300 rounded-md hover:bg-gray-100">Next</a>
         </nav>
     </div>
     <!-- end pagination part -->
@@ -478,7 +588,7 @@
                         <li class="text-gray-500">Vans in Bangladesh</li>
 
                     </ul>
-                    <ul class="bgteal-400 p-3">
+                    <ul class="p-3">
                         <p class="text-xl font-bold">From BikesGuide</p>
                         <li class="text-gray-500">Cars in Bangladesh</li>
                         <li class="text-gray-500">MotoBikes in Bangladesh</li>
@@ -487,7 +597,7 @@
                         <li class="text-gray-500">Vans in Bangladesh</li>
 
                     </ul>
-                    <ul class="bgteal-400 p-3">
+                    <ul class="p-3 hidden md:block">
                         <p class="text-xl font-bold">Popular Vehicles</p>
                         <li class="text-gray-500">Cars in Bangladesh</li>
                         <li class="text-gray-500">MotoBikes in Bangladesh</li>
@@ -496,7 +606,7 @@
                         <li class="text-gray-500">Vans in Bangladesh</li>
 
                     </ul>
-                    <ul class="bgteal-400 p-3">
+                    <ul class="p-3 hidden md:block">
                         <p class="text-xl font-bold">Members</p>
                         <li class="text-gray-500">Cars in Bangladesh</li>
                         <li class="text-gray-500">MotoBikes in Bangladesh</li>
@@ -508,7 +618,7 @@
                 </div>
             </div>
             <div class="flex space-x-10 items-center justify-center mt-10" data-carousel-item>
-                <ul class="bgteal-400 p-3">
+                <ul class="p-3">
                     <p class="text-xl font-bold">Popular Vehicles</p>
                     <li class="text-gray-500">Cars in Bangladesh</li>
                     <li class="text-gray-500">MotoBikes in Bangladesh</li>
@@ -517,7 +627,7 @@
                     <li class="text-gray-500">Vans in Bangladesh</li>
 
                 </ul>
-                <ul class="bgteal-400 p-3">
+                <ul class="p-3">
                     <p class="text-xl font-bold">Cars by Brand</p>
                     <li class="text-gray-500">Cars in Bangladesh</li>
                     <li class="text-gray-500">MotoBikes in Bangladesh</li>
@@ -526,7 +636,7 @@
                     <li class="text-gray-500">Vans in Bangladesh</li>
 
                 </ul>
-                <ul class="bgteal-400 p-3">
+                <ul class="p-3 hideen md:block">
                     <p class="text-xl font-bold">Vehicles by Location</p>
                     <li class="text-gray-500">Cars in Bangladesh</li>
                     <li class="text-gray-500">MotoBikes in Bangladesh</li>
@@ -535,7 +645,7 @@
                     <li class="text-gray-500">Vans in Bangladesh</li>
 
                 </ul>
-                <ul class="bgteal-400 p-3">
+                <ul class="p-3 hidden md:block">
                     <p class="text-xl font-bold">Trending in Vehicles</p>
                     <li class="text-gray-500">Cars in Bangladesh</li>
                     <li class="text-gray-500">MotoBikes in Bangladesh</li>
@@ -544,16 +654,6 @@
                     <li class="text-gray-500">Vans in Bangladesh</li>
 
                 </ul>
-            </div>
-
-
-            <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-                <button type="button" class="w-3 h-3 rounded-full bg-blue-500" aria-current="false" aria-label="Slide 1"
-                    data-carousel-slide-to="0"></button>
-                <button type="button" class="w-3 h-3 rounded-full bg-green-400" aria-current="false"
-                    aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button" class="w-3 h-3 rounded-full bg-blue-500" aria-current="false" aria-label="Slide 3"
-                    data-carousel-slide-to="2"></button>
             </div>
 
             <button type="button"
@@ -607,13 +707,13 @@
             trusted mechanic inspect the car before purchase or opt for Certified Pre-Owned program that many
             manufacturers offer to guarantee quality and safety.
         </p>
-        <button id="toggleButton" class="mt-2 text-gray-500">Show More</button>
+        <button id="toggleButton" class="mt-2 text-primary md:text-gray-500">Show More</button>
     </div>
 
     <!-- last expanded part end -->
     <!-- footer start -->
     <footer class="mt-10 w-full bg-gray-50 py-5">
-        <div class="flex justify-between px-10">
+        <div class="flex justify-center flex-col md:flex-row md:justify-between px-10">
             <ul class="flex-col space-y-2">
                 <p class="text-lg text-gray-700 font-semibold">More from Bikroy</p>
                 <li><a href="">Sell Fast</a></li>
